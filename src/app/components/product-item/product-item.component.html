@@ -1,0 +1,22 @@
+<div class="card m-1 р-1 bg-light">
+  <h4>
+    {{ product.name }}
+    <span class="badge rounded-pill bg-primary float-end">
+      ${{ product.price.toFixed(2) }}
+    </span>
+  </h4>
+  <div class="card-text bg-white р-1">
+    {{ product.description }}
+    <button
+      class="btn btn-success btn-sm float-end"
+      (click)="handleAddToCart()"
+    >
+      Add То Cart
+    </button>
+    <select class="form-control-inline float-end m-1" [(ngModel)]="quantity">
+      <option>l</option>
+      <option>2</option>
+      <option>З</option>
+    </select>
+  </div>
+</div>

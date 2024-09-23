@@ -2,26 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Before you begin, ensure you have the following installed:
 
-## Code scaffolding
+- **Docker**: [Download Docker](https://www.docker.com/get-started)
+- **Git** (optional): If you plan to clone the repository
+- **NPM**: [Download NPM](https://www.npmjs.com/get-npm)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to Run
 
-## Build
+### Build the Docker Image
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To create a Docker image for your Angular application, run the following command:
 
-## Running unit tests
+docker build . -t angularapp -f Dockerfile
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Run the Docker Image 
 
-## Running end-to-end tests
+docker run -p 4001:4001 angularapp
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Once the container is running, open your web browser and navigate to:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+http://localhost:4001
